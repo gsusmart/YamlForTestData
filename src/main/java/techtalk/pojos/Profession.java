@@ -1,6 +1,6 @@
 package techtalk.pojos;
 
-public class Profession {
+public class Profession {    
     private String professionName;
     private String preffesionType;
 
