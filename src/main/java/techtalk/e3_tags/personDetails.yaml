@@ -1,0 +1,27 @@
+!!com.techtalk.pojos.PersonDetails
+name: Ganesh Umasare
+age: 28
+
+primaryHobbies: &hobbies [Dancing, Playing, Trekking]
+secondaryHobbies: *hobbies
+
+primaryAddress: &address { flatNo: 701, society: Kohinoor Society, locality: Fatima Nagar, city: Pune }
+secondaryAddress:
+  <<: *address
+  flatNo: 801
+  city: Hydrabad
+  pinNo: 100200
+
+profession: !!com.techtalk.pojos.Employees
+  professionName: employee
+  preffesionType: salaried
+  nameOfEmployer: Epam Systems
+  salary: 70000000
+  designation: Engineer
+
+largeText1: |
+  This is the large text line 1 testing and other stuff.
+  This is the large text line 2
+largeText2: >
+  This is the large text line 1 some text.
+  This is the large text line 2

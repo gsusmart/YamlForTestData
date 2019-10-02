@@ -1,0 +1,21 @@
+name: Ganesh Umasare
+age: 28
+
+#Example of Anchoring and Referencing
+primaryHobbies: &hobbies [Dancing, Playing, Trekking] #anchoring the hobbies
+secondaryHobbies: *hobbies  #Referencing hobbies will add all primaryHobbies in secondaryHobbies
+
+#Example of Anchoring, Referencing and Extension
+primaryAddress: &address { flatNo: 701, society: Kohinoor Society, locality: Fatima Nagar, city: Pune }
+secondaryAddress:
+  <<: *address # this will add all primary address into secondary address and open it for extension
+  flatNo: 801  # Overriding the value for field 'flatNo'
+  city: Hydrabad # Overriding the value for field 'city'
+  pinNo: 100200 # Adding new field to address
+
+largeText1: |
+    This is the large text line 1 testing and other stuff.
+    This is the large text line 2
+largeText2: >
+    This is the large text line 1 some text.
+    This is the large text line 2

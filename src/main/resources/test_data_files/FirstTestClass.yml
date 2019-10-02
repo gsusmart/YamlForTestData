@@ -1,0 +1,27 @@
+!!com.demo.base_test_file_pojos.TestDataFile
+commonData:
+  userDisplaysThePersonDetails: &personDetails !!com.demo.testdata.PersonDetails
+    name: Ganesh Umasare
+    age: 28
+    primaryHobbies: &hobbies [Dancing, Playing, Trekking]
+    secondaryHobbies: *hobbies
+    primaryAddress: &address { flatNo: 701, society: Kohinoor Society, locality: Fatima Nagar, city: Pune }
+    secondaryAddress:
+      <<: *address
+      flatNo: 801
+    profession: !!com.demo.testdata.inner.Employee { professionName: employee, preffesionType: salaried, nameOfEmployer: Epam Systems, salary: 70000000, designation: Engineer }
+    largeText1: |
+      This is the large text line 1 testing and other stuff.
+      This is the large text line 2
+    largeText2: >
+      This is the large text line 1 some text.
+      This is the large text line 2
+
+allTestData:
+  userDisplaysThePersonDetails:
+    - !!com.demo.testdata.PersonDetails
+      <<: *personDetails
+      name: Ravindra Thakare
+    - !!com.demo.testdata.PersonDetails
+      <<: *personDetails
+      name: Raghvendra Singh

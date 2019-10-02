@@ -1,0 +1,18 @@
+name: "Ganesh Umasare"
+age: 28
+primaryHobbies:
+  - "Dancing"
+  - "Playing"
+secondaryHobbies: ["Dancing", "Playing", "Trekking"]
+primaryAddress:
+  flatNo: 701
+  society: "Kohinoor Society"
+  locality: "Fatima Nagar"
+  city: "Pune"
+secondaryAddress: { flatNo: 701, society: "Kohinoor Society", locality: "Fatima Nagar", city: "Pune" }
+largeText1: |
+  This is the large text line 1 testing and other stuff
+  This is the large text line 2
+largeText2: >
+  This is the large text line 1 some text.
+  This is the large text line 2
